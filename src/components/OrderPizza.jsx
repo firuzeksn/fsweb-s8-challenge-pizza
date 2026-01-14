@@ -50,7 +50,7 @@ const handleSubmit = (e) => {
     e.preventDefault();
     if (!isValid) return;
 
-    const payload = { ...form, toplamFiyat: toplamFiyat.toFixed(2) };
+    const payload = { ...form, count, toplamFiyat: toplamFiyat.toFixed(2) };
 
     axios.post("https://reqres.in/api/pizza", payload, {
       headers: { 'x-api-key': 'reqres-free-v1' } 

@@ -67,7 +67,8 @@ const Success = ({ data }) => {
           <p>Hamur: <strong>{data.hamur }</strong></p>
           <p>Ek Malzemeler: <strong>{data.malzemeler?.join(", ")}</strong></p>
         </div>
-
+{/* Sipariş Bilgileri kısmına ekle */}
+<p>Adet: <strong>{data.count || 1}</strong></p>
         {/* Sipariş toplam kutusu */}
         <div style={{ 
           border: '1px solid rgba(255,255,255,0.5)', 
