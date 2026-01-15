@@ -1,8 +1,8 @@
 describe('Pizza Sipariş Formu Testleri', () => {
   beforeEach(() => {
-    // EĞER FORM ANA SAYFADAYSA: cy.visit('http://localhost:5174/')
-    // EĞER FORM BAŞKA SAYFADAYSA (ÖRN: /order):
-    cy.visit('http://localhost:5174/pizza'); 
+    // EĞER FORM ANA SAYFADAYSA: cy.visit('http://localhost:5173/')
+
+    cy.visit('http://localhost:5173/pizza'); 
   });
 
   it('inputa bir metin giren test', () => {
@@ -53,7 +53,7 @@ describe('Pizza Sipariş Formu Testleri', () => {
 
 describe('Pizza Sipariş Süreci Kapsamlı Test', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:5174/pizza'); // App.jsx'te yolun /pizza
+    cy.visit('http://localhost:5173/pizza'); // App.jsx'te yolun /pizza
   });
 
   it('Form validasyonu: İsim 3 karakterden azsa buton disabled kalmalı', () => {

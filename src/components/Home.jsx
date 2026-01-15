@@ -13,14 +13,14 @@ const Home = () => {
         display: 'flex', 
         flexDirection: 'column', 
         alignItems: 'center', 
-        justifyContent: 'center',
         color: 'white',
-        padding: '20px 0'
+        fontFamily: "'Barlow', sans-serif", 
+        height: "1080 px", 
+        width: "100%"
       }}> 
         <h1 className='teknoYemek'>
           <img src="images/iteration-1-images/logo.svg" alt="Logo" />
         </h1>
-
         <p style={{ 
           fontFamily: "'Satisfy', cursive", 
           color: "#FDC913", 
