@@ -16,7 +16,8 @@ const Home = () => {
         color: 'white',
         fontFamily: "'Barlow', sans-serif", 
         height: "1080 px", 
-        width: "100%"
+        width: "100%",
+        paddingTop: "60px",
       }}> 
         <h1 className='teknoYemek'>
           <img src="images/iteration-1-images/logo.svg" alt="Logo" />
@@ -62,7 +63,7 @@ const Home = () => {
       </div>
 
       {/* ürünler*/}
-      <nav className="kategori-menu" style={{ display: 'flex', justifyContent: 'center', gap: '30px', padding: '20px', backgroundColor: 'white' }}>
+      <nav className="kategori-menu">
         {[
           { id: 1, name: 'Yeni!Kore' },
           { id: 2, name: 'Pizza' },
@@ -71,27 +72,29 @@ const Home = () => {
           { id: 5, name: 'Fast Food' },
           { id: 6, name: 'Gazlı İçecekler' }
         ].map(item => (
-          <div key={item.id} style={{ textAlign: 'center', color: '#292929', fontSize: '14px', fontWeight: '500' }}>
+           <div className="kategori-column">
+          <div key={item.id} className="kategori-item" style={{ textAlign: 'center', cursor: 'pointer' }}>
             <img src={`images/iteration-2-images/icons/${item.id}.svg`} alt={item.name} style={{ display: 'block', margin: '0 auto 5px' }} />
             <span>{item.name}</span>
+          </div>
           </div>
         ))}
       </nav>
 
       {/* kartlar */}
-      <section style={{ maxWidth: '1000px', margin: '40px auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
-        <div className="pizza-kart" style={{ backgroundImage: 'url(images/iteration-2-images/cta/kart-1.png)', borderRadius: '15px', padding: '40px', color: 'white', display: 'flex', flexDirection: 'column', justifyContent: 'space-between',     }}>
+      <section className='container'>
+        <div className="pizza-kart" style={{ backgroundImage: 'url(images/iteration-2-images/cta/kart-1.png)', borderRadius: '15px', padding: '40px', color: 'white', display: 'flex', flexDirection: 'column', justifyContent: 'space-between',  width: '100%', height: '100%' }}> 
           <h2 style={{ fontSize: '40px', margin: '0' }}>Özel<br />Lezzetus</h2>
           <p>Position: Absolute Acı Burger</p>
           <button onClick={() => history.push('/pizza')} style={{ backgroundColor: 'white', color: '#D80027', border: 'none', padding: '10px 20px', borderRadius: '20px', fontWeight: 'bold', cursor: 'pointer' }}>SİPARİŞ VER</button>
         </div>
 
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-          <div className="burger-kart" style={{ backgroundImage: 'url(images/iteration-2-images/cta/kart-2.png)',backgroundColor: '#292929', borderRadius: '15px', padding: '30px', color: 'white' }}>
+        <div className="sagdaki-kartlar" style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+          <div className="burger-kart" style={{ backgroundImage: 'url(images/iteration-2-images/cta/kart-2.png)',backgroundColor: '#292929', borderRadius: '15px', padding: '30px', color: 'white', backgroundRepeat: 'round' }}>
             <h3 style={{ margin: '0' }}>Hackathlon<br />Burger Menü</h3>
             <button onClick={() => history.push('/pizza')} style={{ backgroundColor: 'white', color: '#D80027', border: 'none', padding: '8px 15px', borderRadius: '20px', marginTop: '10px', cursor: 'pointer' }}>SİPARİŞ VER</button>
           </div>
-          <div className="kurye-kart" style={{ backgroundImage: 'url(images/iteration-2-images/cta/kart-3.png)',backgroundColor: '#FDC913', borderRadius: '15px', padding: '30px', color: '#292929' }}>
+          <div className="kurye-kart" style={{ backgroundImage: 'url(images/iteration-2-images/cta/kart-3.png)',backgroundColor: '#FDC913', borderRadius: '15px', padding: '30px', color: '#292929',backgroundRepeat: 'round' }}>
             <h3 style={{ margin: '0' }}><span style={{ color: '#D80027' }}>Çooook</span> hızlı<br />npm gibi kurye</h3>
             <button onClick={() => history.push('/pizza')} style={{ backgroundColor: 'white', color: '#D80027', border: 'none', padding: '8px 15px', borderRadius: '20px', marginTop: '10px', cursor: 'pointer' }}>SİPARİŞ VER</button>
           </div>
@@ -102,7 +105,7 @@ const Home = () => {
       <main style={{ textAlign: 'center', padding: '40px 0', backgroundColor: '#faf7f2' }}>
         <p style={{ color: '#ce2829', fontFamily: "'Satisfy', cursive", fontSize: '20px' }}>en çok paketlenen menüler</p>
         <h2 style={{ fontSize: '30px', marginBottom: '40px' }}>Acıktıran Kodlara Doyuran Lezzetler</h2>
-    <nav className="kategori-menu" style={{ display: 'flex', justifyContent: 'center', gap: '15px', padding: '40px 20px', backgroundColor: '#FAF7F2' }}>
+    <nav className="kategori-listesi" >
   {[
     { id: 1, name: 'Ramen', icon: '1.svg' },
     { id: 2, name: 'Pizza', icon: '2.svg', active: true }, 
@@ -113,6 +116,7 @@ const Home = () => {
   ].map(item => (
     <div 
       key={item.id} 
+      className='kategori-column'
       style={{ 
         display: 'flex',
         alignItems: 'center',
@@ -136,26 +140,26 @@ const Home = () => {
     </div>
   ))}
 </nav>
-        <div style={{ display: 'flex', justifyContent: 'center', gap: '30px' }}>
-          <div className="urun-kart" style={{ backgroundColor: 'white', padding: '20px', borderRadius: '15px', width: '250px' }}>
+        <div className='urunler' >
+          <div className="urun-kart" >
               <img src="images/iteration-2-images/pictures/food-1.png" alt="Terminal Pizza" style={{ width: '100%' }} />
-            <h3 style={{ fontSize: '18px', textAlign: 'left' }}>Terminal Pizza</h3>
+            <h3 style={{ fontSize: '18px', textAlign: 'left', fontWeight: 'bold' }}>Terminal Pizza</h3>
             <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '10px', fontWeight: 'bold' }}>
               <span>4.9</span>
               <span style={{ color: '#ce2829' }}>60₺</span>
             </div>
           </div>
-          <div className="urun-kart" style={{ backgroundColor: 'white', padding: '20px', borderRadius: '15px', width: '250px' }}>
+          <div className="urun-kart" >
               <img src="images/iteration-2-images/pictures/food-2.png" alt="Position Absolute Acı Pizza" style={{ width: '100%' }} />
-            <h3 style={{ fontSize: '18px', textAlign: 'left' }}>Position Absolute Acı Pizza</h3>
+            <h3 style={{ fontSize: '18px', textAlign: 'left', fontWeight: 'bold' }}>Position Absolute Acı Pizza</h3>
             <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '10px', fontWeight: 'bold' }}>
               <span>4.9</span>
               <span style={{ color: '#ce2829' }}>60₺</span>
             </div>
           </div>
-          <div className="urun-kart" style={{ backgroundColor: 'white', padding: '20px', borderRadius: '15px', width: '250px' }}>
+          <div className="urun-kart" >
               <img src="images/iteration-2-images/pictures/food-3.png" alt="useEffect Tavuklu Burger" style={{ width: '100%' }} />
-            <h3 style={{ fontSize: '18px', textAlign: 'left' }}>useEffect Tavuklu Burger</h3>
+            <h3 style={{ fontSize: '18px', textAlign: 'left', fontWeight: 'bold' }}>useEffect Tavuklu Burger</h3>
             <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '10px', fontWeight: 'bold' }}>
               <span>4.9</span>
               <span style={{ color: '#ce2829' }}>60₺</span>

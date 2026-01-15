@@ -29,7 +29,7 @@ const Success = ({ data }) => {
       
       {/* onay */}
       <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-        <p style={{ 
+        <p className='mobile-none' style={{ 
           fontFamily: "'Satisfy', cursive", 
           color: '#FDC913', 
           fontSize: '1.8rem', 
@@ -37,6 +37,14 @@ const Success = ({ data }) => {
         }}>
           lezzetin yolda
         </p>
+         <h2 className="mobile-show" style={{ 
+          fontSize: '4.5rem', 
+          fontWeight: '300', 
+          margin: '10px 0',
+          letterSpacing: '1.5px'
+        }}>
+          TEBRİKLER
+        </h2>
         <h2 style={{ 
           fontSize: '4.5rem', 
           fontWeight: '300', 
@@ -48,7 +56,7 @@ const Success = ({ data }) => {
       </div>
 
       {/* çizgi */}
-      <hr style={{ 
+      <hr className="mobile-none" style={{ 
         width: '400px', 
         border: '0', 
         borderTop: '1px solid rgba(255,255,255,0.3)',
@@ -57,7 +65,7 @@ const Success = ({ data }) => {
     
       
       {/* Pizza Bilgileri */}
-      <div style={{ textAlign: 'center', width: '100%', maxWidth: '400px' }}>
+      <div className='mobile-none' style={{ textAlign: 'center', width: '100%', maxWidth: '400px' }}>
         <h3 style={{ fontSize: '1.4rem', fontWeight: '600', marginBottom: '30px' }}>
           Position Absolute Acı Pizza
         </h3>
