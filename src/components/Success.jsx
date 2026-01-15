@@ -17,15 +17,9 @@ const Success = ({ data }) => {
       paddingTop: '80px',
       fontFamily: "'Barlow', sans-serif"
     }}>
-      {/* tekno yemek */}
-      <h1 style={{ 
-        fontFamily: "'Roboto Condensed', sans-serif", 
-        fontSize: '2.5rem', 
-        fontWeight: '700',
-        marginBottom: '60px' 
-      }}>
-        Teknolojik Yemekler
-      </h1>
+      <header style={{ backgroundColor: '#CE2829', padding: '40px 0', textAlign: 'center' }}>
+        <img src="images/iteration-1-images/logo.svg" alt="Logo" style={{ display: 'block', margin: '0 auto', maxWidth: '100%' }}/>
+      </header>
       
       {/* onay */}
       <div style={{ textAlign: 'center', marginBottom: '40px' }}>
@@ -38,14 +32,16 @@ const Success = ({ data }) => {
           lezzetin yolda
         </p>
          <h2 className="mobile-show" style={{ 
-          fontSize: '4.5rem', 
-          fontWeight: '300', 
+          fontSize: '3rem', 
+          fontWeight: '100', 
           margin: '10px 0',
-          letterSpacing: '1.5px'
+          letterSpacing: '1.5px',
+          fontFamily: "'Barlow', sans-serif",
         }}>
-          TEBRİKLER
+          TEBRİKLER!
+          SİPARİŞİNİZ ALINDI
         </h2>
-        <h2 style={{ 
+        <h2 className="mobile-none" style={{ 
           fontSize: '4.5rem', 
           fontWeight: '300', 
           margin: '10px 0',
@@ -59,7 +55,7 @@ const Success = ({ data }) => {
       <hr className="mobile-none" style={{ 
         width: '400px', 
         border: '0', 
-        borderTop: '1px solid rgba(255,255,255,0.3)',
+        borderTop: '1px solid #5F5F5F',
         marginBottom: '40px' 
       }} />
     

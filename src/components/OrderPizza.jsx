@@ -66,10 +66,10 @@ const handleSubmit = (e) => {
     })
   };
   return (
-    <div className="order-pizza-page" style={{ backgroundColor: '#FFFFFF', minHeight: '100vh', fontFamily: "'Barlow', sans-serif" }}>
+    <div className="order-pizza-page" style={{ backgroundColor: 'white', minHeight: '100vh', fontFamily: "'Barlow', sans-serif" }}>
       
       <header style={{ backgroundColor: '#CE2829', padding: '40px 0', textAlign: 'center' }}>
-        <img src="images/iteration-1-images/logo.svg" alt="Logo" />
+        <img src="images/iteration-1-images/logo.svg" alt="Logo" style={{ display: 'block', margin: '0 auto', maxWidth: '100%' }}/>
       </header>
 
       <div style={{ backgroundColor: '#FAF7F2' }}>
@@ -120,9 +120,9 @@ const handleSubmit = (e) => {
               <select name="hamur" value={form.hamur} onChange={handleChange} 
                 style={{ width: '100%', padding: '12px', marginTop: '15px', border: '1px solid #E2E2E2', borderRadius: '5px', backgroundColor: '#FAF7F2' }}>
                 <option value="" disabled>—Hamur Kalınlığı Seç—</option>
-                <option value="ince">İnce</option>
-                <option value="normal">Normal</option>
-                <option value="kalin">Kalın</option>
+                <option value="İnce">İnce</option>
+                <option value="Normal">Normal</option>
+                <option value="Kalın">Kalın</option>
               </select>
             </div>
           </div>

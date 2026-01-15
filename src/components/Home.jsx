@@ -80,22 +80,23 @@ const Home = () => {
           </div>
         ))}
       </nav>
-
+ 
       {/* kartlar */}
       <section className='container'>
         <div className="pizza-kart" style={{ backgroundImage: 'url(images/iteration-2-images/cta/kart-1.png)', borderRadius: '15px', padding: '40px', color: 'white', display: 'flex', flexDirection: 'column', justifyContent: 'space-between',  width: '100%', height: '100%' }}> 
-          <h2 style={{ fontSize: '40px', margin: '0' }}>Özel<br />Lezzetus</h2>
+          <h2 style={{ fontFamily: 'Quattrocento', fontSize: '48px', margin: '0', lineHeight: 1.1, fontWeight: 700 }}>Özel<br />Lezzetus</h2>
           <p>Position: Absolute Acı Burger</p>
-          <button onClick={() => history.push('/pizza')} style={{ backgroundColor: 'white', color: '#D80027', border: 'none', padding: '10px 20px', borderRadius: '20px', fontWeight: 'bold', cursor: 'pointer' }}>SİPARİŞ VER</button>
+          <button onClick={() => history.push('/pizza')} style={{marginTop: "25px", padding: "12px 26px", borderRadius: "30px", border: "none", backgroundColor:"#fff", color: "#d62828", fontWeight: "600", cursor: "pointer" }}>SİPARİŞ VER</button>
         </div>
 
-        <div className="sagdaki-kartlar" style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+        <div className="sagdaki-kartlar" style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
           <div className="burger-kart" style={{ backgroundImage: 'url(images/iteration-2-images/cta/kart-2.png)',backgroundColor: '#292929', borderRadius: '15px', padding: '30px', color: 'white', backgroundRepeat: 'round' }}>
-            <h3 style={{ margin: '0' }}>Hackathlon<br />Burger Menü</h3>
+            <h3 style={{ fontFamily: 'Roboto', fontSize: "26px", lineHeight:"1.2" }}>Hackathlon<br />Burger Menü</h3>
             <button onClick={() => history.push('/pizza')} style={{ backgroundColor: 'white', color: '#D80027', border: 'none', padding: '8px 15px', borderRadius: '20px', marginTop: '10px', cursor: 'pointer' }}>SİPARİŞ VER</button>
           </div>
+
           <div className="kurye-kart" style={{ backgroundImage: 'url(images/iteration-2-images/cta/kart-3.png)',backgroundColor: '#FDC913', borderRadius: '15px', padding: '30px', color: '#292929',backgroundRepeat: 'round' }}>
-            <h3 style={{ margin: '0' }}><span style={{ color: '#D80027' }}>Çooook</span> hızlı<br />npm gibi kurye</h3>
+            <h3 style={{ fontFamily: 'Barlow', fontSize: "26px", color: 'black', lineHeight:"1.2" }}><span style={{ color: '#D80027' }}>Çooook</span> hızlı<br />npm gibi kurye</h3>
             <button onClick={() => history.push('/pizza')} style={{ backgroundColor: 'white', color: '#D80027', border: 'none', padding: '8px 15px', borderRadius: '20px', marginTop: '10px', cursor: 'pointer' }}>SİPARİŞ VER</button>
           </div>
         </div>
@@ -103,7 +104,7 @@ const Home = () => {
 
       {/* ürünler */}
       <main style={{ textAlign: 'center', padding: '40px 0', backgroundColor: '#faf7f2' }}>
-        <p style={{ color: '#ce2829', fontFamily: "'Satisfy', cursive", fontSize: '20px' }}>en çok paketlenen menüler</p>
+        <p style={{ color: '#CE2829', fontFamily: "'Satisfy', cursive", fontSize: '20px' }}>en çok paketlenen menüler</p>
         <h2 style={{ fontSize: '30px', marginBottom: '40px' }}>Acıktıran Kodlara Doyuran Lezzetler</h2>
     <nav className="kategori-listesi" >
   {[
@@ -146,7 +147,8 @@ const Home = () => {
             <h3 style={{ fontSize: '18px', textAlign: 'left', fontWeight: 'bold' }}>Terminal Pizza</h3>
             <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '10px', fontWeight: 'bold' }}>
               <span>4.9</span>
-              <span style={{ color: '#ce2829' }}>60₺</span>
+              <span style={{ color: 'grey' }}>200</span>
+              <span style={{ color: 'black' }}>60₺</span>
             </div>
           </div>
           <div className="urun-kart" >
@@ -154,7 +156,8 @@ const Home = () => {
             <h3 style={{ fontSize: '18px', textAlign: 'left', fontWeight: 'bold' }}>Position Absolute Acı Pizza</h3>
             <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '10px', fontWeight: 'bold' }}>
               <span>4.9</span>
-              <span style={{ color: '#ce2829' }}>60₺</span>
+              <span style={{ color: 'grey' }}>200</span>
+              <span style={{ color: 'black' }}>60₺</span>
             </div>
           </div>
           <div className="urun-kart" >
@@ -162,7 +165,8 @@ const Home = () => {
             <h3 style={{ fontSize: '18px', textAlign: 'left', fontWeight: 'bold' }}>useEffect Tavuklu Burger</h3>
             <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '10px', fontWeight: 'bold' }}>
               <span>4.9</span>
-              <span style={{ color: '#ce2829' }}>60₺</span>
+              <span style={{ color: 'grey' }}>200</span>
+              <span style={{ color: 'black' }}>60₺</span>
             </div>   
           </div>
         </div>
@@ -170,7 +174,7 @@ const Home = () => {
     </div>
       {/* footer */}
     <footer style={{ 
-      backgroundColor: '#1A1A1A', 
+      backgroundColor: 'black', 
       color: 'white', 
       padding: '60px 20px',
       display: 'flex',
@@ -222,7 +226,7 @@ const Home = () => {
         {/* hot menü */}
         <div className="hot-menu" style={{ flex: '1', minWidth: '200px' }}>
           <h3 style={{ fontSize: '20px', marginBottom: '25px', fontWeight: '600' }}>Hot Menu</h3>
-          <ul style={{ listStyle: 'none', padding: '0', lineHeight: '2', color: '#FAF7F2' }}>
+          <ul style={{ listStyle: 'none', padding: '0', lineHeight: '2', color: 'white' }}>
             <li>Terminal Pizza</li>
             <li>5 Kişilik Hackathlon Pizza</li>
             <li>useEffect Tavuklu Pizza</li>
@@ -255,12 +259,12 @@ const Home = () => {
       </div>
     </footer>
     <div className="alt-footer-wrapper" style={{ 
-  backgroundColor: '#1A1A1A', 
+  backgroundColor: 'black', 
   paddingBottom: '20px' 
 }}>
   {/* çizgi */}
   <div className="cizgi" style={{ 
-    borderTop: '1px solid #333', 
+    borderTop: '1px solid #5F5F5F', 
     width: '100%', 
     marginBottom: '20px' 
   }}></div>

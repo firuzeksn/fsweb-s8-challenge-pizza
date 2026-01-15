@@ -28,7 +28,6 @@
   line-height: 1.2;
 }
 .container {
-  max-width: 1200px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1.2fr 1fr;
@@ -52,8 +51,8 @@
 }
 
 .aciktim-button {
-  background-color: var(--brand-yellow); /* Marka sarısı */
-  color: var(--dark-grey);
+  background-color:#FDC913; 
+  color: #292929;           
   border: none;
   padding: 15px 50px;
   border-radius: 50px;
@@ -64,7 +63,7 @@
 }
 
 .kategori-menu {
-  background-color: #ffffff;
+  background-color: white;
   height: 94px;
   display: flex;
   justify-content: center;
